@@ -2,13 +2,9 @@
 
 ## Goals
 
-### Deploy the funciton with a GitHub Actions workflow
+### Deploy the function with a GitHub Actions workflow
 
-```
-func azure functionapp publish <name_of_func_app>
-```
-
-### Track progress of function
+### Track function progress
 
 Monitor an ongoing function through another function. One endpoint may trigger a
 long task, while another endpoint reports the progress made. Otherwise, let the
@@ -24,10 +20,14 @@ multiple long tasks can not be started.
 
 ### HttpTrigger
 
-The `authLevel` property determines what keys, if any, need to be present on the request in order to invoke the function.
+The `authLevel` property determines what keys, if any, need to be present on the
+request in order to invoke the function.
 
-* **anonymous**: No API key is required
-* **function**: (default) A function-specific API key is required. Does not change between deployments and can be renewed.
-* **admin**: The master key is required
+- **anonymous**: No API key is required
+- **function**: (default) A function-specific API key is required. Does not
+  change between deployments and can be renewed.
+- **admin**: The master key is required
 
-See [the documentation](https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.functions.annotation.httptrigger.authlevel?view=azure-java-stable) for further details.
+See
+[the documentation](https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.functions.annotation.httptrigger.authlevel?view=azure-java-stable)
+for further details.

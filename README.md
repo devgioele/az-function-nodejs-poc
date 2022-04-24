@@ -19,3 +19,15 @@ not polling.
 
 Make only one instance of a function possible at the same time, such that
 multiple long tasks can not be started.
+
+## Notes
+
+### HttpTrigger
+
+The `authLevel` property determines what keys, if any, need to be present on the request in order to invoke the function.
+
+* **anonymous**: No API key is required
+* **function**: (default) A function-specific API key is required. Does not change between deployments and can be renewed.
+* **admin**: The master key is required
+
+See [the documentation](https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.functions.annotation.httptrigger.authlevel?view=azure-java-stable) for further details.

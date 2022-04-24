@@ -7,11 +7,11 @@ on:
       - main
     paths:
       # Something inside a directory
-      - "**/*"
+      - '**/*'
       # But not stuff that is not source code
-      - "!.vscode/*"
-      - "!.github/**/*"
-      - "!*"
+      - '!.vscode/*'
+      - '!.github/**/*'
+      - '!*'
 
 env:
   AZURE_FUNCTIONAPP_NAME: devgioele-poc

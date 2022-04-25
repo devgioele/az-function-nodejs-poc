@@ -50,3 +50,11 @@ See
 [the documentation](https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.functions.annotation.httptrigger.authlevel?view=azure-java-stable)
 for further details.
 
+### Durable Functions
+
+Durable Functions are stateful functions that make [singletons](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-singletons?tabs=javascript) possible.
+
+To use them, install the extension:
+`yarn add durable-functions`
+
+However, web sockets are not supported, meaning that monitoring can only take place in a polling-like manner.

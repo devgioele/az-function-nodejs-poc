@@ -31,3 +31,16 @@ request in order to invoke the function.
 See
 [the documentation](https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.functions.annotation.httptrigger.authlevel?view=azure-java-stable)
 for further details.
+
+### Settings to test Azure Functions locally
+
+In the root directory, `local.settings.json`:
+```json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsStorage": ""
+  }
+}
+```

@@ -16,6 +16,11 @@ not polling.
 Make only one instance of a function possible at the same time, such that
 multiple long tasks can not be started.
 
+### Trigger on blob storage events
+
+Start the function whenever a specific event in a blob storage occurs, like the
+addition of certain files.
+
 ## Notes
 
 ### Settings to test Azure Functions locally
@@ -33,13 +38,13 @@ content.
 }
 ```
 
-This is a basic settings file to get started. Secrets may be added in the 
+This is a basic settings file to get started. Secrets may be added in the
 future, which is why this file is not pushed to the repo.
 
 ### Authorization
 
-The `authLevel` property of a function determines what keys, if any, need to be present on the
-request in order to invoke the function.
+The `authLevel` property of a function determines what keys, if any, need to be
+present on the request in order to invoke the function.
 
 - **anonymous**: No API key is required
 - **function**: (default) A function-specific API key is required. Does not
@@ -52,9 +57,11 @@ for further details.
 
 ### Durable Functions
 
-Durable Functions are stateful functions that make [singletons](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-singletons?tabs=javascript) possible.
+Durable Functions are stateful functions that make
+[singletons](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-singletons?tabs=javascript)
+possible.
 
-To use them, install the extension:
-`yarn add durable-functions`
+To use them, install the extension: `yarn add durable-functions`
 
-However, web sockets are not supported, meaning that monitoring can only take place in a polling-like manner.
+However, web sockets are not supported, meaning that monitoring can only take
+place in a polling-like manner.
